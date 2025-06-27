@@ -5,14 +5,29 @@ let filtro = '';
 let busqueda = '';
 let carrito = [];
 
-const productos = Array.from({ length: 60 }, (_, i) => ({
-  id: i + 1,
-  nombre: `Producto ${i + 1}`,
-  descripcion: 'Descripción breve del producto.',
-  categoria: ['Hombre', 'Mujer', 'Niños'][i % 3],
-  imagen: `public/img/producto${i + 1}.jpg`, // <-- aquí cambia la ruta
-  precio: (Math.random() * 50 + 10).toFixed(2)
-}));
+const productos = [
+  { id: 1, nombre: 'Nike Air Force 1', descripcion: 'Zapatilla clásica urbana', categoria: 'Hombre', imagen: 'public/img/producto1.jpg', precio: 159.999 },
+  { id: 2, nombre: 'Adidas Stan Smith', descripcion: 'Estilo icónico y limpio', categoria: 'Mujer', imagen: 'public/img/producto2.jpg', precio: 154990 },
+  { id: 3, nombre: 'Puma Suede Classic', descripcion: 'Retro con estilo urbano', categoria: 'Niños', imagen: 'public/img/producto3.jpg', precio: 149990 },
+  { id: 4, nombre: 'Nike Air Max 270', descripcion: 'Comodidad con cámara de aire', categoria: 'Hombre', imagen: 'public/img/producto4.jpg', precio: 274990 },
+  { id: 5, nombre: 'Adidas Superstar', descripcion: 'Leyenda urbana en blanco y negro', categoria: 'Mujer', imagen: 'public/img/producto5.jpg', precio: 159990 },
+  { id: 6, nombre: 'Converse Chuck Taylor', descripcion: 'Clásicas y versátiles', categoria: 'Niños', imagen: 'public/img/producto6.jpg', precio: 139990 },
+  { id: 7, nombre: 'Reebok Classic Leather', descripcion: 'Cuero suave con estilo retro', categoria: 'Hombre', imagen: 'public/img/producto7.jpg', precio: 251990 },
+  { id: 8, nombre: 'Vans Old Skool', descripcion: 'Skate y estilo urbano', categoria: 'Mujer', imagen: 'public/img/producto8.jpg', precio: 144990 },
+  { id: 9, nombre: 'Nike Blazer Mid', descripcion: 'Diseño vintage renovado', categoria: 'Niños', imagen: 'public/img/producto9.jpg', precio: 246990 },
+  { id: 10, nombre: 'New Balance 574', descripcion: 'Balance entre deporte y moda', categoria: 'Hombre', imagen: 'public/img/producto10.jpg', precio: 257990 },
+  { id: 11, nombre: 'Adidas Forum Low', descripcion: 'Estilo retro reimaginado', categoria: 'Mujer', imagen: 'public/img/producto11.jpg', precio: 153990 },
+  { id: 12, nombre: 'Puma RS-X', descripcion: 'Diseño chunky y colorido', categoria: 'Niños', imagen: 'public/img/producto12.jpg', precio: 149990 },
+  { id: 13, nombre: 'Nike Dunk Low', descripcion: 'Inspiración en el básquet', categoria: 'Hombre', imagen: 'public/img/producto13.jpg', precio: 164990 },
+  { id: 14, nombre: 'Adidas NMD_R1', descripcion: 'Tecnología Boost al máximo', categoria: 'Mujer', imagen: 'public/img/producto14.jpg', precio: 269990 },
+  { id: 15, nombre: 'Fila Disruptor II', descripcion: 'Diseño robusto y actual', categoria: 'Niños', imagen: 'public/img/producto15.jpg', precio: 241990 },
+  { id: 16, nombre: 'Jordan 1 Mid', descripcion: 'Herencia deportiva legendaria', categoria: 'Hombre', imagen: 'public/img/producto16.jpg', precio: 184990 },
+  { id: 17, nombre: 'Asics Gel-Lyte III', descripcion: 'Diseño retro y funcional', categoria: 'Mujer', imagen: 'public/img/producto17.jpg', precio: 255990 },
+  { id: 18, nombre: 'Nike Air Huarache', descripcion: 'Máximo ajuste y confort', categoria: 'Niños', imagen: 'public/img/producto18.jpg', precio: 153990 },
+  { id: 19, nombre: 'Reebok Zig Kinetica', descripcion: 'Diseño futurista para moverte', categoria: 'Hombre', imagen: 'public/img/producto19.jpg', precio: 162990 },
+  { id: 20, nombre: 'Adidas Gazelle', descripcion: 'Minimalismo clásico', categoria: 'Mujer', imagen: 'public/img/producto20.jpg', precio: 148990 }
+];
+
 
 
 // --------------------- ELEMENTOS DOM ---------------------
@@ -191,3 +206,4 @@ if (btnIrCatalogo) {
     }, 300);
   });
 }
+
