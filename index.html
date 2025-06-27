@@ -22,10 +22,17 @@
   <!-- Navbar profesional con glassmorphism -->
 <header class="navbar-glass sticky-top">
   <nav class="navbar navbar-expand-lg navbar-dark container">
-    <a class="navbar-brand d-flex align-items-center" href="#">
-      <img src="public/imagen/logo.png"> alt="Logo D4taFlowChile" height="60" class="me-2 rounded shadow-sm">
+    <a class="navbar-brand d-flex align-items-center" href="#" style="margin-left: 10px;">
+  <img src="public/img/logo.jpg" 
+       alt="Logo D4taFlowChile" 
+       height="60"
+       class="me-2 rounded-circle shadow border border-white p-1 bg-white" 
+       style="object-fit: cover;">
+  <span class="fs-4 fw-bold text-white">D4taFlowChile</span>
+</a>
+
       <span class="fs-4 fw-bold">D4taFlowChile</span>
-    </a>
+    </a>3
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -60,25 +67,32 @@
   </section>
 
   <!-- Catálogo -->
-  <section id="catalogo" class="container py-5">
-    <h2 class="text-center mb-5">Catálogo</h2>
-    <div class="row justify-content-center mb-4">
-      <div class="col-md-5 mb-2">
-        <input type="text" id="buscador" class="form-control" placeholder="Buscar productos..." />
-      </div>
-      <div class="col-md-5">
-        <select id="filtro-categoria" class="form-select">
-          <option value="">Todas las categorías</option>
-          <option value="Hombre">Hombre</option>
-          <option value="Mujer">Mujer</option>
-          <option value="Niños">Niños</option>
-        </select>
-      </div>
+<section id="catalogo" class="container py-5">
+  <h2 class="text-center mb-5">Catálogo</h2>
+  
+  <!-- Filtro y buscador opcional -->
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <select id="filtro-categoria" class="form-select">
+        <option value="">Todos</option>
+        <option value="Hombre">Hombre</option>
+        <option value="Mujer">Mujer</option>
+        <option value="Niños">Niños</option>
+      </select>
     </div>
-    <div class="row g-4" id="contenedor-productos"></div>
-    <nav class="mt-4">
-      <ul class="pagination justify-content-center" id="paginacion"></ul>
-    </nav>
+    <div class="col-md-6">
+      <input type="text" id="buscador" class="form-control" placeholder="Buscar productos...">
+    </div>
+  </div>
+
+  <!-- Contenedor de productos -->
+  <div class="row" id="contenedor-productos"></div>
+
+  <!-- Paginación -->
+  <ul class="pagination justify-content-center mt-4" id="paginacion"></ul>
+</section>
+
+
   </section>
 
   <!-- Nosotros -->
@@ -178,3 +192,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
